@@ -88,3 +88,13 @@ muteBtn.addEventListener("click", toggleMute);
 volumeSlider.addEventListener("input", (e) => changeVolume(e.target.value));
 settingsBtn.addEventListener("click", toggleSettings);
 aspectButtons.forEach(button => button.addEventListener("click", changeAspect));
+function forceLandscape() {
+    if (screen.orientation) {
+        screen.orientation.lock("landscape").catch(err => {
+            console.log("Error al forzar orientación:", err);
+        });
+    }
+}
+
+// Llamar a la función cuando se carga la página
+document.addEventListener("DOMContentLoaded", forceLandscape);
