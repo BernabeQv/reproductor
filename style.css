@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    margin: 0;
+}
+
+.player {
+    position: relative;
+    width: 640px;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container {
+    width: 100%;
+    height: 360px;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.progress-container {
+    flex: 1;
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #d63384;
+    transition: width 0.2s ease-in-out;
+}
+
+.time {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.settings {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.volume-slider {
+    appearance: none;
+    width: 80px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #d63384;
+    border-radius: 50%;
+    cursor: pointer;
+}
